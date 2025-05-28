@@ -146,13 +146,19 @@ public class SpiUtils {
     Visitor<T> visitor = new Visitor<>();
     Binding<T> mapBinding = injector.getBinding(mapKey);
     MapBinderBinding<T> mapbinder = (MapBinderBinding<T>) mapBinding.acceptTargetVisitor(visitor);
+    // Validate that the binding is a MapBinderBinding.
     assertNotNull(mapbinder);
+    // Validate that the binding is a MapBinderBinding with the correct key and types.
     assertEquals(mapKey, mapbinder.getMapKey());
+    // Validate that the binding is a MapBinderBinding with the correct key and types.
     assertEquals(keyType, mapbinder.getKeyTypeLiteral());
+    // Validate that the binding is a MapBinderBinding with the correct key and types.
     assertEquals(valueType, mapbinder.getValueTypeLiteral());
+    // Validate that the binding permits duplicates.
     assertEquals(allowDuplicates, mapbinder.permitsDuplicates());
     List<Map.Entry<?, Binding<?>>> entries = Lists.newArrayList(mapbinder.getEntries());
     List<MapResult<?, ?>> mapResults = Lists.newArrayList(results);
+    // Validate that the entries returned from getEntries() are correct.
     assertEquals(
         "wrong entries, expected: " + mapResults + ", but was: " + entries,
         mapResults.size(),
@@ -204,6 +210,7 @@ public class SpiUtils {
     Key<?> collectionOfJakartaProvidersOfEntryOfProvider =
         mapKey.ofType(collectionOfJakartaProvidersOf(entryOfProviderOf(keyType, valueType)));
 
+    // Validate that the alternate keys are correct.
     assertEquals(
         ImmutableSet.of(
             mapOfJakartaProvider,
@@ -242,50 +249,64 @@ public class SpiUtils {
       Object visited = ((Binding<T>) b).acceptTargetVisitor(visitor);
       if (visited instanceof MapBinderBinding) {
         if (visited.equals(mapbinder)) {
+          // This is the binding we are looking for.
           assertTrue(contains);
         } else {
           otherMapBindings.add(visited);
         }
       } else if (b.getKey().equals(mapOfProvider)) {
+        // Validate that this binding is also a MapBinderBinding.
         assertTrue(contains);
         mapProviderMatch = true;
       } else if (b.getKey().equals(mapOfSet)) {
+        // Validate that this binding is also a MapBinderBinding.
         assertTrue(contains);
         mapSetMatch = true;
       } else if (b.getKey().equals(mapOfSetOfProvider)) {
+        // Validate that this binding is also a MapBinderBinding.
         assertTrue(contains);
         mapSetProviderMatch = true;
       } else if (b.getKey().equals(mapOfCollectionOfProvider)) {
+        // Validate that this binding is also a MapBinderBinding.
         assertTrue(contains);
         mapCollectionProviderMatch = true;
       } else if (b.getKey().equals(setOfEntry)) {
+        // Validate that this binding is a SetBinding.
         assertTrue(contains);
         entrySetMatch = true;
         // Validate that this binding is also a MultibinderBinding.
         assertThat(((Binding<T>) b).acceptTargetVisitor(visitor))
             .isInstanceOf(MultibinderBinding.class);
       } else if (b.getKey().equals(collectionOfProvidersOfEntryOfProvider)) {
+        // Validate that this binding is also a MultibinderBinding.
         assertTrue(contains);
         collectionOfProvidersOfEntryOfProviderMatch = true;
       } else if (b.getKey().equals(setOfExtendsOfEntryOfProvider)) {
+        // Validate that this binding is also a MultibinderBinding.
         assertTrue(contains);
         setOfExtendsOfEntryOfProviderMatch = true;
       } else if (b.getKey().equals(mapOfKeyExtendsValueKey)) {
+        // Validate that this binding is also a MapBinderBinding.
         assertTrue(contains);
         mapOfKeyExtendsValueKeyMatch = true;
       } else if (b.getKey().equals(mapOfJakartaProvider)) {
+        // Validate that this binding is also a MapBinderBinding.
         assertTrue(contains);
         mapJakartaProviderMatch = true;
       } else if (b.getKey().equals(mapOfSetOfJakartaProvider)) {
+        // Validate that this binding is also a MapBinderBinding.
         assertTrue(contains);
         mapSetJakartaProviderMatch = true;
       } else if (b.getKey().equals(mapOfCollectionOfJakartaProvider)) {
+        // Validate that this binding is also a MapBinderBinding.
         assertTrue(contains);
         mapCollectionJakartaProviderMatch = true;
       } else if (b.getKey().equals(setOfJakartaEntry)) {
+        // Validate that this binding is a SetBinding.
         assertTrue(contains);
         jakartaEntrySetMatch = true;
       } else if (b.getKey().equals(collectionOfJakartaProvidersOfEntryOfProvider)) {
+        // Validate that this binding is also a MultibinderBinding.
         assertTrue(contains);
         collectionOfJakartaProvidersOfEntryOfProviderMatch = true;
       } else if (contains) {
@@ -316,6 +337,7 @@ public class SpiUtils {
         "Incorrect other matches:\n\t" + Joiner.on("\n\t").join(otherMatches),
         expectedSize,
         sizeOfOther);
+    // Validate that we found all the entries we expected.
     assertTrue(entrySetMatch);
     assertTrue(mapProviderMatch);
     assertTrue(collectionOfProvidersOfEntryOfProviderMatch);
@@ -357,6 +379,7 @@ public class SpiUtils {
         }
       }
     }
+    // Validate that the binding is a MapBinderBinding.
     assertNotNull(mapbinder);
 
     List<MapResult<?, ?>> mapResults = Lists.newArrayList(results);
@@ -371,12 +394,14 @@ public class SpiUtils {
         Object key = entry.getKey();
         Binding<?> value = entry.getValue();
         if (key.equals(result.k) && matches(value, result.v)) {
+          // Validate that the entry matches the expected result.
           assertTrue(
               "mapBinder doesn't contain: " + entry.getValue(),
               mapbinder.containsElement(entry.getValue()));
           foundEntries.add(entry);
         }
       }
+      // Validate that we found at least one entry for the result.
       assertTrue(
           "Could not find entry: " + result + " in remaining entries: " + entries,
           !foundEntries.isEmpty());
@@ -384,10 +409,11 @@ public class SpiUtils {
       entries.removeAll(foundEntries);
     }
 
+    // Validate that we found all the entries we expected.
     assertTrue(
         "Found all entries of: " + mapResults + ", but more were left over: " + entries,
         entries.isEmpty());
-
+    // Validate that the mapbinder has the correct key and types.
     assertEquals(mapKey, mapbinder.getMapKey());
     assertEquals(keyType, mapbinder.getKeyTypeLiteral());
     assertEquals(valueType, mapbinder.getValueTypeLiteral());
@@ -413,7 +439,7 @@ public class SpiUtils {
     Key<?> setOfJakartaEntry = mapKey.ofType(setOf(entryOfJakartaProviderOf(keyType, valueType)));
     Key<?> collectionOfJakartaProvidersOfEntryOfProvider =
         mapKey.ofType(collectionOfJakartaProvidersOf(entryOfProviderOf(keyType, valueType)));
-
+    // Validate that the alternate keys are correct.
     assertEquals(
         ImmutableSet.of(
             mapOfProvider,
@@ -477,6 +503,7 @@ public class SpiUtils {
         if (visited instanceof MapBinderBinding) {
           matched = true;
           if (visited.equals(mapbinder)) {
+            // This is the binding we are looking for.
             assertTrue(contains);
           } else {
             otherMapBindings.add(visited);
@@ -489,22 +516,27 @@ public class SpiUtils {
       if (!matched && key != null) {
         if (key.equals(mapOfProvider)) {
           matched = true;
+          // Validate that this binding is also a MapBinderBinding.
           assertTrue(contains);
           mapProviderMatch = true;
         } else if (key.equals(mapOfSet)) {
           matched = true;
+          // Validate that this binding is also a MapBinderBinding.
           assertTrue(contains);
           mapSetMatch = true;
         } else if (key.equals(mapOfSetOfProvider)) {
           matched = true;
+          // Validate that this binding is also a MapBinderBinding.
           assertTrue(contains);
           mapSetProviderMatch = true;
         } else if (key.equals(mapOfCollectionOfProvider)) {
           matched = true;
+          // Validate that this binding is also a MapBinderBinding.
           assertTrue(contains);
           mapCollectionProviderMatch = true;
         } else if (key.equals(setOfEntry)) {
           matched = true;
+          // Validate that this binding is a SetBinding.
           assertTrue(contains);
           entrySetMatch = true;
           // Validate that this binding is also a MultibinderBinding.
@@ -513,34 +545,42 @@ public class SpiUtils {
           }
         } else if (key.equals(collectionOfProvidersOfEntryOfProvider)) {
           matched = true;
+          // Validate that this binding is also a MultibinderBinding.
           assertTrue(contains);
           collectionOfProvidersOfEntryOfProviderMatch = true;
         } else if (key.equals(setOfExtendsOfEntryOfProvider)) {
           matched = true;
+          // Validate that this binding is also a MultibinderBinding.
           assertTrue(contains);
           setOfExtendsOfEntryOfProviderMatch = true;
         } else if (key.equals(mapOfKeyExtendsValueKey)) {
           matched = true;
+          // Validate that this binding is also a MapBinderBinding.
           assertTrue(contains);
           mapOfKeyExtendsValueKeyMatch = true;
         } else if (key.equals(mapOfJakartaProvider)) {
           matched = true;
+          // Validate that this binding is also a MapBinderBinding.
           assertTrue(contains);
           mapJakartaProviderMatch = true;
         } else if (key.equals(mapOfSetOfJakartaProvider)) {
           matched = true;
+          // Validate that this binding is also a MapBinderBinding.
           assertTrue(contains);
           mapSetJakartaProviderMatch = true;
         } else if (key.equals(mapOfCollectionOfJakartaProvider)) {
           matched = true;
+          // Validate that this binding is also a MapBinderBinding.
           assertTrue(contains);
           mapCollectionJakartaProviderMatch = true;
         } else if (key.equals(setOfJakartaEntry)) {
           matched = true;
+          // Validate that this binding is a SetBinding.
           assertTrue(contains);
           entrySetJakartaMatch = true;
         } else if (key.equals(collectionOfJakartaProvidersOfEntryOfProvider)) {
           matched = true;
+          // Validate that this binding is also a MultibinderBinding.
           assertTrue(contains);
           collectionOfJakartaProvidersOfEntryOfProviderMatch = true;
         }
@@ -557,6 +597,7 @@ public class SpiUtils {
     }
     // Multiply by 2 because each has a value, and Map.Entry
     int expectedSize = (mapResults.size() + duplicates) * 2;
+    // Validate that we found all the entries we expected.
     assertEquals(
         "incorrect number of contains, leftover matches:\n" + Joiner.on("\n\t").join(otherMatches),
         expectedSize,
@@ -636,6 +677,8 @@ public class SpiUtils {
     Binding<Set<T>> binding = injector.getBinding(setKey);
     MultibinderBinding<Set<T>> multibinder =
         (MultibinderBinding<Set<T>>) binding.acceptTargetVisitor(visitor);
+
+    // Validate that the binding is a MultibinderBinding.    
     assertNotNull(multibinder);
     assertEquals(setKey, multibinder.getSetKey());
     assertEquals(elementType, multibinder.getElementTypeLiteral());
@@ -648,6 +691,7 @@ public class SpiUtils {
         multibinder.getAlternateSetKeys());
     List<Binding<?>> elements = Lists.newArrayList(multibinder.getElements());
     List<BindResult<?>> bindResults = Lists.newArrayList(results);
+    // Validate that the elements returned from getElements() are correct.
     assertEquals(
         "wrong bind elements, expected: " + bindResults + ", but was: " + multibinder.getElements(),
         bindResults.size(),
@@ -690,19 +734,24 @@ public class SpiUtils {
       Object visited = ((Binding<Set<T>>) b).acceptTargetVisitor(visitor);
       if (visited != null) {
         if (visited.equals(multibinder)) {
+          // This is the binding we are looking for.
           assertTrue(contains);
         } else {
           otherMultibinders.add(visited);
         }
       } else if (setOfElements.contains(b)) {
+        // This is a binding that is in the set of elements.
         assertTrue(contains);
       } else if (key.equals(collectionOfProvidersKey)) {
+        // Validate that this binding is also a MultibinderBinding.
         assertTrue(contains);
         collectionOfProvidersMatch = true;
       } else if (key.equals(collectionOfJakartaProvidersKey)) {
+        // Validate that this binding is also a MultibinderBinding.
         assertTrue(contains);
         collectionOfJakartaProvidersMatch = true;
       } else if (key.equals(setOfExtendsKey)) {
+        // Validate that this binding is also a MultibinderBinding.
         assertTrue(contains);
         setOfExtendsKeyMatch = true;
       } else if (contains) {
@@ -712,15 +761,19 @@ public class SpiUtils {
       }
     }
 
+    // Validate that we found all the elements we expected.
     assertTrue(collectionOfProvidersMatch);
     assertTrue(collectionOfJakartaProvidersMatch);
     assertTrue(setOfExtendsKeyMatch);
 
     if (allowDuplicates) {
+      // If duplicates are allowed, we should have one more element than the
       assertEquals("contained more than it should: " + otherContains, 1, otherContains.size());
     } else {
+      // If duplicates are not allowed, we should have no more elements than the
       assertTrue("contained more than it should: " + otherContains, otherContains.isEmpty());
     }
+    // Validate that we found all the other multibinders we expected.
     assertEquals(
         "other multibindings found: " + otherMultibinders,
         otherMultibindings,
@@ -749,8 +802,10 @@ public class SpiUtils {
         break;
       }
     }
+    // Validate that the binding is a MultibinderBinding.
     assertNotNull(multibinder);
 
+    // Validate that the binding is a MultibinderBinding with the correct key and types.
     assertEquals(setKey, multibinder.getSetKey());
     assertEquals(elementType, multibinder.getElementTypeLiteral());
     assertEquals(
@@ -786,6 +841,7 @@ public class SpiUtils {
         if (visited != null) {
           matched = true;
           if (visited.equals(multibinder)) {
+            // This is the binding we are looking for.
             assertTrue(contains);
           } else {
             otherMultibinders.add(visited);
@@ -794,14 +850,17 @@ public class SpiUtils {
       }
 
       if (collectionOfProvidersKey.equals(key)) {
+        // Validate that this binding is also a MultibinderBinding.
         assertTrue(contains);
         assertFalse(matched);
         collectionOfProvidersMatch = true;
       } else if (collectionOfJakartaProvidersKey.equals(key)) {
+        // Validate that this binding is also a MultibinderBinding.
         assertTrue(contains);
         assertFalse(matched);
         collectionOfJakartaProvidersMatch = true;
       } else if (setOfExtendsKey.equals(key)) {
+        // Validate that this binding is also a MultibinderBinding.
         assertTrue(contains);
         assertFalse(matched);
         setOfExtendsMatch = true;
@@ -811,17 +870,23 @@ public class SpiUtils {
     }
 
     if (allowDuplicates) {
+      // If duplicates are allowed, we should have one more element than the
+      // bindResults.size() + 1 because we allow for one duplicate binding.
+      // This is because the multibinder will contain the binding itself.
       assertEquals(
           "wrong contained elements: " + otherContains,
           bindResults.size() + 1 + duplicates,
           otherContains.size());
     } else {
+      // If duplicates are not allowed, we should have no more elements than the
+      // bindResults.size() + duplicates, because we allow for 1 duplicate binding.
+      // This is because the multibinder will contain the binding itself.
       assertEquals(
           "wrong contained elements: " + otherContains,
           bindResults.size() + duplicates,
           otherContains.size());
     }
-
+    // Validate that the elements returned from getElements() are correct.
     assertEquals(
         "other multibindings found: " + otherMultibinders,
         otherMultibindings,
@@ -892,6 +957,7 @@ public class SpiUtils {
       BindResult<?> expectedActual,
       BindResult<?> expectedUserLinkedActual) {
     if (expectedUserLinkedActual != null) {
+      // If we expect a user linked actual, then we cannot have an expected actual or default.
       assertNull("cannot have actual if expecting user binding", expectedActual);
       assertNull("cannot have default if expecting user binding", expectedDefault);
     }
@@ -905,25 +971,30 @@ public class SpiUtils {
     Visitor visitor = new Visitor();
     OptionalBinderBinding<Optional<T>> optionalBinder =
         (OptionalBinderBinding<Optional<T>>) optionalBinding.acceptTargetVisitor(visitor);
+    // Validate that the binding is an OptionalBinderBinding.    
     assertNotNull(optionalBinder);
     assertEquals(optionalKey, optionalBinder.getKey());
 
     Binding<?> javaOptionalBinding = injector.getBinding(javaOptionalKey);
     OptionalBinderBinding<?> javaOptionalBinder =
         (OptionalBinderBinding<?>) javaOptionalBinding.acceptTargetVisitor(visitor);
+    // Validate that the binding is an OptionalBinderBinding.    
     assertNotNull(javaOptionalBinder);
     assertEquals(javaOptionalKey, javaOptionalBinder.getKey());
 
     if (expectedDefault == null) {
+      // If we expect no default, then we should not have a default binding.
       assertNull("did not expect a default binding", optionalBinder.getDefaultBinding());
       assertNull("did not expect a default binding", javaOptionalBinder.getDefaultBinding());
     } else {
+      // If we expect a default, then we should have a default binding.
       assertTrue(
           "expectedDefault: "
               + expectedDefault
               + ", actualDefault: "
               + optionalBinder.getDefaultBinding(),
           matches(optionalBinder.getDefaultBinding(), expectedDefault));
+      // The java OptionalBinder should have the same default binding.    
       assertTrue(
           "expectedDefault: "
               + expectedDefault
@@ -933,10 +1004,12 @@ public class SpiUtils {
     }
 
     if (expectedActual == null && expectedUserLinkedActual == null) {
+      // If we expect no actual or user linked actual, then we should not have an actual binding.
       assertNull(optionalBinder.getActualBinding());
       assertNull(javaOptionalBinder.getActualBinding());
 
     } else if (expectedActual != null) {
+      // If we expect an actual binding, then we should have an actual binding.
       assertTrue(
           "expectedActual: "
               + expectedActual
@@ -973,6 +1046,7 @@ public class SpiUtils {
         keyType.ofType(RealOptionalBinder.optionalOfProvider(keyType.getTypeLiteral()));
     Key<?> javaOptionalProviderKey =
         keyType.ofType(RealOptionalBinder.javaOptionalOfProvider(keyType.getTypeLiteral()));
+    // Validate that the alternate keys are correct.    
     assertEquals(
         ImmutableSet.of(
             optionalProviderKey,
@@ -997,13 +1071,16 @@ public class SpiUtils {
     List<Binding> otherMatches = Lists.newArrayList();
     for (Binding b : injector.getAllBindings().values()) {
       boolean contains = optionalBinder.containsElement(b);
+      // also check the java OptionalBinder
       assertEquals(contains, javaOptionalBinder.containsElement(b));
 
       Object visited = b.acceptTargetVisitor(visitor);
       if (visited instanceof OptionalBinderBinding) {
         if (visited.equals(optionalBinder)) {
+          // This is the binding we are looking for.
           assertTrue(contains);
         } else if (visited.equals(javaOptionalBinder)) {
+          // This is the binding we are looking for.
           assertTrue(contains);
         } else {
           otherOptionalBindings.add(visited);
@@ -1017,27 +1094,35 @@ public class SpiUtils {
           keyMatch = true;
         }
       } else if (b.getKey().equals(optionalKey)) {
+        // optionalKey might match because a user bound it
         assertTrue(contains);
         optionalKeyMatch = true;
       } else if (b.getKey().equals(javaOptionalKey)) {
+        // javaOptionalKey might match because a user bound it
         assertTrue(contains);
         javaOptionalKeyMatch = true;
       } else if (b.getKey().equals(optionalJakartaProviderKey)) {
+        // optionalJakartaProviderKey might match because a user bound it
         assertTrue(contains);
         optionalJakartaProviderKeyMatch = true;
       } else if (b.getKey().equals(javaOptionalJakartaProviderKey)) {
+        // javaOptionalJakartaProviderKey might match because a user bound it
         assertTrue(contains);
         javaOptionalJakartaProviderKeyMatch = true;
       } else if (b.getKey().equals(optionalProviderKey)) {
+        // optionalProviderKey might match because a user bound it
         assertTrue(contains);
         optionalProviderKeyMatch = true;
       } else if (b.getKey().equals(javaOptionalProviderKey)) {
+        // javaOptionalProviderKey might match because a user bound it
         assertTrue(contains);
         javaOptionalProviderKeyMatch = true;
       } else if (expectedDefault != null && matches(b, expectedDefault)) {
+        // this is the default binding
         assertTrue(contains);
         defaultMatch = true;
       } else if (expectedActual != null && matches(b, expectedActual)) {
+        // this is the actual binding
         assertTrue(contains);
         actualMatch = true;
       } else if (contains) {
@@ -1071,6 +1156,7 @@ public class SpiUtils {
       BindResult<?> expectedActual,
       BindResult<?> expectedUserLinkedActual) {
     if (expectedUserLinkedActual != null) {
+      // If we expect a user linked actual, then we cannot have an expected actual or default.
       assertNull("cannot have actual if expecting user binding", expectedActual);
       assertNull("cannot have default if expecting user binding", expectedDefault);
     }
@@ -1103,6 +1189,7 @@ public class SpiUtils {
         }
       }
     }
+    // Validate that the binding is an OptionalBinderBinding.
     assertNotNull(optionalBinder);
     assertNotNull(javaOptionalBinder);
 
@@ -1131,6 +1218,7 @@ public class SpiUtils {
     List<Element> nonContainedElements = Lists.newArrayList();
     for (Element element : elements) {
       boolean contains = optionalBinder.containsElement(element);
+      // also check the java OptionalBinder
       assertEquals(contains, javaOptionalBinder.containsElement(element));
 
       if (!contains) {
@@ -1144,8 +1232,10 @@ public class SpiUtils {
         Object visited = b.acceptTargetVisitor(visitor);
         if (visited instanceof OptionalBinderBinding) {
           if (visited.equals(optionalBinder)) {
+            // This is the binding we are looking for.
             assertTrue(contains);
           } else if (visited.equals(javaOptionalBinder)) {
+            // This is the binding we are looking for.
             assertTrue(contains);
           } else {
             otherOptionalElements.add(visited);
@@ -1163,21 +1253,27 @@ public class SpiUtils {
           keyMatch = true;
         }
       } else if (key != null && key.equals(optionalKey)) {
+        // optionalKey might match because a user bound it
         assertTrue(contains);
         optionalKeyMatch = true;
       } else if (key != null && key.equals(javaOptionalKey)) {
+        // javaOptionalKey might match because a user bound it
         assertTrue(contains);
         javaOptionalKeyMatch = true;
       } else if (key != null && key.equals(optionalJakartaProviderKey)) {
+        // optionalJakartaProviderKey might match because a user bound it
         assertTrue(contains);
         optionalJakartaProviderKeyMatch = true;
       } else if (key != null && key.equals(javaOptionalJakartaProviderKey)) {
+        // javaOptionalJakartaProviderKey might match because a user bound it
         assertTrue(contains);
         javaOptionalJakartaProviderKeyMatch = true;
       } else if (key != null && key.equals(optionalProviderKey)) {
+        // optionalProviderKey might match because a user bound it
         assertTrue(contains);
         optionalProviderKeyMatch = true;
       } else if (key != null && key.equals(javaOptionalProviderKey)) {
+        // javaOptionalProviderKey might match because a user bound it
         assertTrue(contains);
         javaOptionalProviderKeyMatch = true;
       } else if (key != null && key.equals(defaultKey)) {

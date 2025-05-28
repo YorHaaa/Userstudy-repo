@@ -99,6 +99,8 @@ public interface Injector {
    * injector}, should one exist. The returned map is guaranteed to iterate (for example, with its
    * {@link Map#entrySet()} iterator) in the order of insertion. In other words, the order in which
    * bindings appear in user Modules.
+   * 
+   * to be removed in 5.0, use {@link #getAllBindings()} instead.
    *
    * <p>This method is part of the Guice SPI and is intended for use by tools and extensions.
    */
@@ -158,6 +160,9 @@ public interface Injector {
    * Returns all explicit bindings for {@code type}.
    *
    * <p>This method is part of the Guice SPI and is intended for use by tools and extensions.
+   * 
+   * @Deprecated use {@link #getProvider(Dependency)} instead.
+   * 
    */
   <T> List<Binding<T>> findBindingsByType(TypeLiteral<T> type);
 
@@ -193,6 +198,8 @@ public interface Injector {
    * Returns the appropriate instance for the given injection type; equivalent to {@code
    * getProvider(type).get()}. When feasible, avoid using this method, in favor of having Guice
    * inject your dependencies ahead of time.
+   * 
+   * This is no longer used and only present for backward compatibility.
    *
    * @throws ConfigurationException if this injector cannot find or create the provider.
    * @throws ProvisionException if there was a runtime failure while providing an instance.
@@ -247,6 +254,10 @@ public interface Injector {
    * <p>No key may be bound by both an injector and one of its ancestors. This includes just-in-time
    * bindings. The lone exception is the key for {@code Injector.class}, which is bound by each
    * injector to itself.
+   * 
+   * <p><b> legacy:</b> In v4.0 and later, prefer using {@link #createChildInjector(Iterable)} for
+   * creating child injectors. This method is retained for compatibility, but it is recommended 
+   * to use the iterable version for consistency and flexibility.
    *
    * @since 2.0
    */
@@ -258,7 +269,6 @@ public interface Injector {
    * The returned map is immutable.
    *
    * <p>This method is part of the Guice SPI and is intended for use by tools and extensions.
-   *
    * @since 3.0
    */
   Map<Class<? extends Annotation>, Scope> getScopeBindings();
@@ -305,6 +315,9 @@ public interface Injector {
    *
    * <p>This method is part of the Guice SPI and is intended for use by tools and extensions.
    *
+   * <p> Refactoring needed to support multiple injection points for the same type. Method will be 
+   * removed in 5.0. 
+   * 
    * @since 4.2.3
    */
   Map<TypeLiteral<?>, List<InjectionPoint>> getAllMembersInjectorInjectionPoints();

@@ -132,6 +132,7 @@ public final class Errors implements Serializable {
 
   public Errors aopDisabled(InterceptorBinding binding) {
     return addMessage(
+      /** AOP (Aspect-Oriented Programming) support is disabled, but interceptors were bound. */
         ErrorId.AOP_DISABLED,
         "Binding interceptor is not supported when bytecode generation is disabled. \nInterceptor"
             + " bound at: %s",
@@ -156,6 +157,10 @@ public final class Errors implements Serializable {
    * things unnecessarily complex.
    */
   public Errors missingImplementation(Key<?> key) {
+    /**
+     * No implementation for %s was bound. If you want to bind it, use
+     * {@code bind(%s.class).to(...)} or {@code bind(%s.class).toProvider(...)}.
+     */
     return addMessage(ErrorId.MISSING_IMPLEMENTATION, "No implementation for %s was bound.", key);
   }
 
@@ -164,11 +169,13 @@ public final class Errors implements Serializable {
     MissingImplementationError<T> error =
         new MissingImplementationError<T>(key, injector, getSources());
       return addMessage(
+          /** No implementation for %s was bound. */
           new Message(GuiceInternal.GUICE_INTERNAL, ErrorId.MISSING_IMPLEMENTATION, error));
   }
 
   public Errors jitDisabled(Key<?> key) {
     return addMessage(
+        /** Just-in-time (JIT) binding is disabled, but an explicit binding is required. */
         ErrorId.JIT_DISABLED,
         "Explicit bindings are required and %s is not explicitly bound.",
         key);
@@ -176,6 +183,7 @@ public final class Errors implements Serializable {
 
   public Errors jitDisabledInParent(Key<?> key) {
     return addMessage(
+        /** Just-in-time (JIT) binding is disabled in the parent injector. */
         ErrorId.JIT_DISABLED_IN_PARENT,
         "Explicit bindings are required and %s would be bound in a parent injector.\n"
             + "Please add an explicit binding for it, either in the child or the parent.",
@@ -185,6 +193,7 @@ public final class Errors implements Serializable {
   public Errors atInjectRequired(TypeLiteral<?> type) {
     return addMessage(
         new Message(
+            /** A type requires an @Inject annotation on its constructor. */
             GuiceInternal.GUICE_INTERNAL,
             ErrorId.MISSING_CONSTRUCTOR,
             new MissingConstructorError(type, /* atInjectRequired= */ true, getSources())));
@@ -196,6 +205,7 @@ public final class Errors implements Serializable {
       TypeLiteral<?> type,
       TypeConverterBinding typeConverterBinding) {
     return addMessage(
+        /** A type converter returned null during conversion. */
         ErrorId.CONVERTER_RETURNED_NULL,
         "Received null converting '%s' (bound at %s) to %s\n using %s.",
         stringValue,
@@ -211,6 +221,7 @@ public final class Errors implements Serializable {
       TypeConverterBinding typeConverterBinding,
       Object converted) {
     return addMessage(
+        /** Type mismatch during conversion from string to target type. */
         ErrorId.CONVERSION_TYPE_ERROR,
         "Type mismatch converting '%s' (bound at %s) to %s\n"
             + " using %s.\n"
@@ -245,6 +256,7 @@ public final class Errors implements Serializable {
       TypeConverterBinding a,
       TypeConverterBinding b) {
     return addMessage(
+        /** Multiple type converters found for the same target type. */
         ErrorId.AMBIGUOUS_TYPE_CONVERSION,
         "Multiple converters can convert '%s' (bound at %s) to %s:\n"
             + " %s and\n"
@@ -258,38 +270,45 @@ public final class Errors implements Serializable {
   }
 
   public Errors bindingToProvider() {
+    /** Attempt to bind to a Provider type, which is not allowed directly. */
     return addMessage(ErrorId.BINDING_TO_PROVIDER, "Binding to Provider is not allowed.");
   }
 
   public Errors notASubtype(Class<?> implementationType, Class<?> type) {
+    /** Attempt to bind a type that does not extend the expected type. */
     return addMessage(ErrorId.NOT_A_SUBTYPE, "%s doesn't extend %s.", implementationType, type);
   }
 
   public Errors recursiveImplementationType() {
     return addMessage(
+        /** @ImplementedBy points to the same class it annotates. */
         ErrorId.RECURSIVE_IMPLEMENTATION_TYPE,
         "@ImplementedBy points to the same class it annotates.");
   }
 
   public Errors recursiveProviderType() {
     return addMessage(
+        /** @ProvidedBy points to the same class it annotates. */
         ErrorId.RECURSIVE_PROVIDER_TYPE, "@ProvidedBy points to the same class it annotates.");
   }
 
   public Errors missingRuntimeRetention(Class<? extends Annotation> annotation) {
     return addMessage(
+        /** The annotation is missing @Retention(RUNTIME), which is required for Guice to use it. */
         ErrorId.MISSING_RUNTIME_RETENTION,
         format("Please annotate %s with @Retention(RUNTIME).", annotation));
   }
 
   public Errors missingScopeAnnotation(Class<? extends Annotation> annotation) {
     return addMessage(
+        /** The annotation is missing @ScopeAnnotation, which is required for Guice to use it. */
         ErrorId.MISSING_SCOPE_ANNOTATION,
         format("Please annotate %s with @ScopeAnnotation.", annotation));
   }
 
   public Errors optionalConstructor(Constructor<?> constructor) {
     return addMessage(
+        /** Attempt to use an optional constructor, which is not allowed. */
         ErrorId.OPTIONAL_CONSTRUCTOR,
         "%s is annotated @Inject(optional=true), but constructors cannot be optional.",
         constructor);
@@ -297,6 +316,7 @@ public final class Errors implements Serializable {
 
   public Errors cannotBindToGuiceType(String simpleName) {
     return addMessage(
+        /** Attempt to bind to a core Guice framework type, which is disallowed. */
         ErrorId.BINDING_TO_GUICE_TYPE,
         "Binding to core guice framework type is not allowed: %s.",
         simpleName);
@@ -305,6 +325,7 @@ public final class Errors implements Serializable {
   public Errors scopeNotFound(Class<? extends Annotation> scopeAnnotation) {
     return addMessage(
         new Message(
+            /** No scope was found for the given annotation. */
             GuiceInternal.GUICE_INTERNAL,
             ErrorId.SCOPE_NOT_FOUND,
             new ScopeNotFoundError(scopeAnnotation, getSources())));
@@ -313,6 +334,7 @@ public final class Errors implements Serializable {
   public Errors scopeAnnotationOnAbstractType(
       Class<? extends Annotation> scopeAnnotation, Class<?> type, Object source) {
     return addMessage(
+        /** Scope annotation used on abstract type, which is not allowed. */
         ErrorId.SCOPE_ANNOTATION_ON_ABSTRACT_TYPE,
         "%s is annotated with %s, but scope annotations are not supported "
             + "for abstract types.\n Bound at %s.",
@@ -323,6 +345,7 @@ public final class Errors implements Serializable {
 
   public Errors misplacedBindingAnnotation(Member member, Annotation bindingAnnotation) {
     return addMessage(
+        /** Binding annotation is placed incorrectly (e.g., on method rather than parameter). */
         ErrorId.MISPLACED_BINDING_ANNOTATION,
         "%s is annotated with %s, but binding annotations should be applied "
             + "to its parameters instead.",
@@ -338,6 +361,7 @@ public final class Errors implements Serializable {
   public Errors missingConstructor(TypeLiteral<?> type) {
     return addMessage(
         new Message(
+            /** A type requires a constructor annotated with @Inject. */
             GuiceInternal.GUICE_INTERNAL,
             ErrorId.MISSING_CONSTRUCTOR,
             new MissingConstructorError(type, /* atInjectRequired= */ false, getSources())));
@@ -345,6 +369,7 @@ public final class Errors implements Serializable {
 
   public Errors tooManyConstructors(Class<?> implementation) {
     return addMessage(
+        /** More than one constructor annotated with @Inject, which is ambiguous. */
         ErrorId.TOO_MANY_CONSTRUCTORS,
         "%s has more than one constructor annotated with @Inject. %s",
         implementation,
@@ -353,6 +378,7 @@ public final class Errors implements Serializable {
 
   public Errors constructorNotDefinedByType(Constructor<?> constructor, TypeLiteral<?> type) {
     return addMessage(
+        /** Constructor does not match the expected type definition. */
         ErrorId.CONSTRUCTOR_NOT_DEFINED_BY_TYPE, "%s does not define %s", type, constructor);
   }
 
@@ -360,6 +386,7 @@ public final class Errors implements Serializable {
     return addMessage(
         new Message(
             GuiceInternal.GUICE_INTERNAL,
+            /** Duplicate keys were found in a MapBinder configuration. */
             ErrorId.DUPLICATE_MAP_KEY,
             new DuplicateMapKeyError<K, V>(mapKey, duplicates, getSources())));
   }
@@ -367,6 +394,7 @@ public final class Errors implements Serializable {
   public Errors duplicateScopes(
       ScopeBinding existing, Class<? extends Annotation> annotationType, Scope scope) {
     return addMessage(
+        /** A scope was bound multiple times for the same annotation. */
         ErrorId.DUPLICATE_SCOPES,
         "Scope %s is already bound to %s at %s.\n Cannot bind %s.",
         existing.getScope(),
@@ -377,16 +405,19 @@ public final class Errors implements Serializable {
 
   public Errors voidProviderMethod() {
     return addMessage(
+        /** Provider methods must return a value, not void. */
         ErrorId.VOID_PROVIDER_METHOD, "Provider methods must return a value. Do not return void.");
   }
 
   public Errors missingConstantValues() {
     return addMessage(
+        /** Attempted to bind a constant without providing its value. */
         ErrorId.MISSING_CONSTANT_VALUES, "Missing constant value. Please call to(...).");
   }
 
   public Errors cannotInjectInnerClass(Class<?> type) {
     return addMessage(
+        /** Injection into inner classes is not allowed unless they are static. */
         ErrorId.INJECT_INNER_CLASS,
         "Injecting into inner classes is not supported.  "
             + "Please use a 'static' class (top-level or nested) instead of %s.",
@@ -395,6 +426,7 @@ public final class Errors implements Serializable {
 
   public Errors cannotInjectLocalClass(Class<?> type) {
     return addMessage(
+        /** Injection into local (non-top-level) classes is not supported. */
         ErrorId.INJECT_LOCAL_CLASS,
         "Injecting into local classes is not supported.  "
             + "Please use a non-local class instead of %s.",
@@ -404,6 +436,7 @@ public final class Errors implements Serializable {
   public Errors duplicateBindingAnnotations(
       Member member, Class<? extends Annotation> a, Class<? extends Annotation> b) {
     return addMessage(
+        /** Multiple binding annotations found on a single member. */
         ErrorId.DUPLICATE_BINDING_ANNOTATIONS,
         "%s has more than one annotation annotated with @BindingAnnotation: %s and %s",
         member,
@@ -413,18 +446,21 @@ public final class Errors implements Serializable {
 
   public Errors staticInjectionOnInterface(Class<?> clazz) {
     return addMessage(
+        /** Attempted to inject into an interface, which is not allowed. */
         ErrorId.STATIC_INJECTION_ON_INTERFACE,
         "%s is an interface, but interfaces have no static injection points.",
         clazz);
   }
 
   public Errors cannotInjectFinalField(Field field) {
+    /** Attempted to inject into a final field, which is not supported. */
     return addMessage(ErrorId.INJECT_FINAL_FIELD, "Injected field %s cannot be final.", field);
   }
 
   public Errors atTargetIsMissingParameter(
       Annotation bindingAnnotation, String parameterName, Class<?> clazz) {
     return addMessage(
+      /** @Target annotation on binding annotation is missing PARAMETER, used incorrectly. */
         ErrorId.AT_TARGET_IS_MISSING_PARAMETER,
         "Binding annotation %s must have PARAMETER listed in its @Targets. It was used on"
             + " constructor parameter %s in %s.",
@@ -435,11 +471,13 @@ public final class Errors implements Serializable {
 
   public Errors cannotInjectAbstractMethod(Method method) {
     return addMessage(
+        /** Attempted to inject into an abstract method, which is not supported. */
         ErrorId.INJECT_ABSTRACT_METHOD, "Injected method %s cannot be abstract.", method);
   }
 
   public Errors cannotInjectMethodWithTypeParameters(Method method) {
     return addMessage(
+        /** Injected method declares type parameters, which is unsupported. */
         ErrorId.INJECT_METHOD_WITH_TYPE_PARAMETER,
         "Injected method %s cannot declare type parameters of its own.",
         method);
@@ -448,6 +486,7 @@ public final class Errors implements Serializable {
   public Errors duplicateScopeAnnotations(
       Class<? extends Annotation> a, Class<? extends Annotation> b) {
     return addMessage(
+        /** Multiple scope annotations found on the same binding. */
         ErrorId.DUPLICATE_SCOPE_ANNOTATIONS,
         "More than one scope annotation was found: %s and %s.",
         a,
@@ -456,17 +495,20 @@ public final class Errors implements Serializable {
 
   public Errors recursiveBinding(Key<?> key, Key<?> linkedKey) {
     return addMessage(
+        /** Binding points to itself, which is not allowed. */
         ErrorId.RECURSIVE_BINDING, "Binding points to itself. Key: %s", Messages.convert(key));
   }
 
   Errors bindingAlreadySet(Binding<?> binding, Binding<?> original) {
     BindingAlreadySetError error = new BindingAlreadySetError(binding, original, getSources());
     return addMessage(
+        /** A binding was already set previously and is being redefined. */
         new Message(GuiceInternal.GUICE_INTERNAL, ErrorId.BINDING_ALREADY_SET, error));
   }
 
   public Errors bindingAlreadySet(Key<?> key, Object source) {
     return addMessage(
+        /** A binding was already set previously and is being redefined. */
         ErrorId.BINDING_ALREADY_SET,
         "A binding to %s was already configured at %s.",
         key,
@@ -475,6 +517,7 @@ public final class Errors implements Serializable {
 
   public Errors jitBindingAlreadySet(Key<?> key) {
     return addMessage(
+        /** A binding was already set previously and is being redefined. */
         ErrorId.JIT_BINDING_ALREADY_SET,
         "A just-in-time binding to %s was already configured on a parent injector.",
         key);
@@ -483,7 +526,9 @@ public final class Errors implements Serializable {
   public Errors childBindingAlreadySet(Key<?> key, Set<Object> sources) {
     Message message =
         new Message(
+            /** A binding was already set previously and is being redefined. */
             GuiceInternal.GUICE_INTERNAL,
+            /** A child injector attempted to set a binding that was already configured. */
             ErrorId.CHILD_BINDING_ALREADY_SET,
             new ChildBindingAlreadySetError(key, sources, getSources()));
       return addMessage(message);
@@ -491,6 +536,7 @@ public final class Errors implements Serializable {
 
   public Errors errorCheckingDuplicateBinding(Key<?> key, Object source, Throwable t) {
     return addMessage(
+        /** An error occurred while checking for duplicate bindings. */
         ErrorId.OTHER,
         "A binding to %s was already configured at %s and an error was thrown "
             + "while checking duplicate bindings.  Error: %s",
@@ -502,6 +548,7 @@ public final class Errors implements Serializable {
   public Errors requestInjectionWithDifferentTypes(
       Object instance, TypeLiteral<?> type1, Object type1Source, TypeLiteral<?> type2) {
     return addMessage(
+        /** Cannot request injection on one instance with two different types. */
         ErrorId.REQUEST_INJECTION_WITH_DIFFERENT_TYPES,
         "Cannot request injection on one instance with two different types. requestInjection was"
             + " already called for instance %s at %s (with type %s), which is different than type"
@@ -525,11 +572,13 @@ public final class Errors implements Serializable {
 
   public Errors exposedButNotBound(Key<?> key) {
     return addMessage(
+        /** Could not expose() %s, it must be explicitly bound. */
         ErrorId.EXPOSED_BUT_NOT_BOUND, "Could not expose() %s, it must be explicitly bound.", key);
   }
 
   public Errors keyNotFullySpecified(TypeLiteral<?> typeLiteral) {
     return addMessage(
+        /** The binding key was not fully specified (e.g., missing type parameter). */
         ErrorId.KEY_NOT_FULLY_SPECIFIED,
         "%s cannot be used as a key; It is not fully specified.",
         typeLiteral);
@@ -557,17 +606,20 @@ public final class Errors implements Serializable {
     if (!messages.isEmpty()) {
       return merge(messages);
     } else {
+      /** General error caused by user code. */
       return addMessage(ErrorId.ERROR_IN_USER_CODE, cause, messageFormat, arguments);
     }
   }
 
   public Errors cannotInjectRawProvider() {
     return addMessage(
+        /** Raw Provider used instead of typed provider. */
         ErrorId.INJECT_RAW_PROVIDER, "Cannot inject a Provider that has no type parameter");
   }
 
   public Errors cannotInjectRawMembersInjector() {
     return addMessage(
+        /** Raw MembersInjector used, which lacks type safety. */  
         ErrorId.INJECT_RAW_MEMBERS_INJECTOR,
         "Cannot inject a MembersInjector that has no type parameter");
   }
@@ -578,6 +630,7 @@ public final class Errors implements Serializable {
 
   public Errors cannotInjectRawTypeLiteral() {
     return addMessage(
+        /** Raw TypeLiteral used instead of a parameterized one. */
         ErrorId.INJECT_RAW_TYPE_LITERAL, "Cannot inject a TypeLiteral that has no type parameter");
   }
 
@@ -657,6 +710,7 @@ public final class Errors implements Serializable {
   }
 
   public Errors addMessage(String messageFormat, Object... arguments) {
+    // If the messageFormat is null, we still want to add a message, so we use ErrorId.OTHER.
     return addMessage(ErrorId.OTHER, null, messageFormat, arguments);
   }
 
