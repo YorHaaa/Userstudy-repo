@@ -1,5 +1,5 @@
 {
-  "/home/user-study/core/src/com/google/inject/AbstractModule.java": [
+  "/home/node/Userstudy-repo/core/src/com/google/inject/AbstractModule.java": [
     {
       "className": "",
       "content": "AbstractModule is a helper class used to add bindings to the Guice injector.",
@@ -662,7 +662,7 @@
       ]
     }
   ],
-  "/home/user-study/core/src/com/google/inject/Binder.java": [
+  "/home/node/Userstudy-repo/core/src/com/google/inject/Binder.java": [
     {
       "className": "",
       "content": "Collects configuration information (primarily <i>bindings</i>) which will be used to create an\n{@link Injector}. Guice provides this object to your application's {@link Module} implementors so\nthey may each contribute their own bindings and other registrations.",
@@ -2047,7 +2047,7 @@
       ]
     }
   ],
-  "/home/user-study/core/src/com/google/inject/Binding.java": [
+  "/home/node/Userstudy-repo/core/src/com/google/inject/Binding.java": [
     {
       "className": "",
       "content": "A mapping from a {@link Key} to the strategy for getting instances of the type. This interface is\npart of the introspection API and is intended primarily for use by tools.",
@@ -2330,7 +2330,7 @@
       ]
     }
   ],
-  "/home/user-study/core/src/com/google/inject/Injector.java": [
+  "/home/node/Userstudy-repo/core/src/com/google/inject/Injector.java": [
     {
       "className": "",
       "content": "Builds the graphs of objects that make up your application. The injector tracks the dependencies\nfor each type and uses bindings to inject them. This is the core of Guice, although you rarely\ninteract with it directly. This \"behind-the-scenes\" operation is what distinguishes dependency\ninjection from its cousin, the service locator pattern.",
@@ -3806,7 +3806,7 @@
       ]
     }
   ],
-  "/home/user-study/core/src/com/google/inject/Module.java": [
+  "/home/node/Userstudy-repo/core/src/com/google/inject/Module.java": [
     {
       "className": "",
       "content": "A module contributes configuration information, typically interface bindings, which will be used\nto create an {@link Injector}. A Guice-based application is ultimately composed of little more\nthan a set of {@code Module}s and some bootstrapping code.",
@@ -3912,7 +3912,7 @@
       ]
     }
   ],
-  "/home/user-study/core/src/com/google/inject/binder/ScopedBindingBuilder.java": [
+  "/home/node/Userstudy-repo/core/src/com/google/inject/binder/ScopedBindingBuilder.java": [
     {
       "className": "",
       "content": "See the EDSL examples at {@link com.google.inject.Binder}.",
@@ -4015,7 +4015,7 @@
       ]
     }
   ],
-  "/home/user-study/core/src/com/google/inject/binder/package-info.java": [
+  "/home/node/Userstudy-repo/core/src/com/google/inject/binder/package-info.java": [
     {
       "className": "",
       "content": "Interfaces which make up {@link com.google.inject.Binder}'s expression language.",
@@ -4038,7 +4038,7 @@
       ]
     }
   ],
-  "/home/user-study/core/src/com/google/inject/internal/Element.java": [
+  "/home/node/Userstudy-repo/core/src/com/google/inject/internal/Element.java": [
     {
       "className": "",
       "content": "An internal binding annotation applied to each element in a multibinding. All elements are\nassigned a globally-unique id to allow different modules to contribute multibindings\nindependently.",
@@ -4080,7 +4080,7 @@
       ]
     }
   ],
-  "/home/user-study/core/src/com/google/inject/internal/EncounterImpl.java": [
+  "/home/node/Userstudy-repo/core/src/com/google/inject/internal/EncounterImpl.java": [
     {
       "className": "",
       "content": "@author jessewilson@google.com (Jesse Wilson)",
@@ -4186,8 +4186,8 @@
       ]
     }
   ],
-  "/home/user-study/core/src/com/google/inject/internal/Error/ErrorFormatter.java": [],
-  "/home/user-study/core/src/com/google/inject/internal/Error/ErrorHandler.java": [
+  "/home/node/Userstudy-repo/core/src/com/google/inject/internal/Error/ErrorFormatter.java": [],
+  "/home/node/Userstudy-repo/core/src/com/google/inject/internal/Error/ErrorHandler.java": [
     {
       "className": "",
       "content": "Handles errors in the Injector.",
@@ -4269,7 +4269,7 @@
       ]
     }
   ],
-  "/home/user-study/core/src/com/google/inject/internal/Error/ErrorId.java": [
+  "/home/node/Userstudy-repo/core/src/com/google/inject/internal/Error/ErrorId.java": [
     {
       "className": "",
       "content": "Enum used to identify a specific Guice error.",
@@ -5513,7 +5513,7 @@
       ]
     }
   ],
-  "/home/user-study/core/src/com/google/inject/internal/Error/Errors.java": [
+  "/home/node/Userstudy-repo/core/src/com/google/inject/internal/Error/Errors.java": [
     {
       "className": "",
       "content": "A collection of error messages. If this type is passed as a method parameter, the method is\nconsidered to have executed successfully only if new errors were not added to this collection.",
@@ -7063,7 +7063,7 @@
       ]
     }
   ],
-  "/home/user-study/core/src/com/google/inject/internal/PrivateElementProcessor.java": [
+  "/home/node/Userstudy-repo/core/src/com/google/inject/internal/PrivateElementProcessor.java": [
     {
       "className": "",
       "content": "Handles {@code Binder.newPrivateBinder()} elements.",
@@ -7105,7 +7105,7 @@
       ]
     }
   ],
-  "/home/user-study/core/src/com/google/inject/internal/PrivateElementsImpl.java": [
+  "/home/node/Userstudy-repo/core/src/com/google/inject/internal/PrivateElementsImpl.java": [
     {
       "className": "",
       "content": "@author jessewilson@google.com (Jesse Wilson)",
@@ -7231,7 +7231,7 @@
       ]
     }
   ],
-  "/home/user-study/core/src/com/google/inject/util/Enhanced.java": [
+  "/home/node/Userstudy-repo/core/src/com/google/inject/util/Enhanced.java": [
     {
       "className": "",
       "content": "Utilities for checking if classes are enhanced and/or getting the original un-enhanced class.",
@@ -7314,7 +7314,7 @@
       ]
     }
   ],
-  "/home/user-study/core/src/com/google/inject/util/Modules.java": [
+  "/home/node/Userstudy-repo/core/src/com/google/inject/util/Modules.java": [
     {
       "className": "",
       "content": "Static utility methods for creating and working with instances of {@link Module}.",
@@ -8160,7 +8160,7 @@
       ]
     }
   ],
-  "/home/user-study/core/src/com/google/inject/util/package-info.java": [
+  "/home/node/Userstudy-repo/core/src/com/google/inject/util/package-info.java": [
     {
       "className": "",
       "content": "Helper methods for working with Guice.",
@@ -8182,7 +8182,7 @@
       ]
     }
   ],
-  "/home/user-study/core/test/com/google/inject/DefaultMethodInterceptionTest.java": [
+  "/home/node/Userstudy-repo/core/test/com/google/inject/DefaultMethodInterceptionTest.java": [
     {
       "className": "",
       "content": "Tests for interception of default methods.",
@@ -8449,7 +8449,7 @@
       ]
     }
   ],
-  "/home/user-study/core/test/com/google/inject/internal/ProxyFactoryTest.java": [
+  "/home/node/Userstudy-repo/core/test/com/google/inject/internal/ProxyFactoryTest.java": [
     {
       "className": "",
       "content": "@author crazybob@google.com (Bob Lee)",
@@ -8471,7 +8471,7 @@
       ]
     }
   ],
-  "/home/user-study/core/test/com/google/inject/internal/util/ContinuousStopwatchTest.java": [
+  "/home/node/Userstudy-repo/core/test/com/google/inject/internal/util/ContinuousStopwatchTest.java": [
     {
       "className": "ContinuousStopwatchTest",
       "content": "Records ContinuousStopwatch logs.",
@@ -8513,7 +8513,7 @@
       ]
     }
   ],
-  "/home/user-study/core/test/com/google/inject/internal/util/LineNumbersTest.java": [
+  "/home/node/Userstudy-repo/core/test/com/google/inject/internal/util/LineNumbersTest.java": [
     {
       "className": "",
       "content": "@author jessewilson@google.com (Jesse Wilson)",
@@ -8535,7 +8535,7 @@
       ]
     }
   ],
-  "/home/user-study/tools/OsgiWrapper.java": [
+  "/home/node/Userstudy-repo/tools/OsgiWrapper.java": [
     {
       "className": "",
       "content": "Java binary that runs bndlib to analyze a jar file to generate OSGi bundle manifest.",
