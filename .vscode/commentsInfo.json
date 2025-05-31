@@ -5267,7 +5267,7 @@
       ],
       "relativePath": "/core/src/com/google/inject/internal/Error/ErrorId.java",
       "type": [
-        "usage"
+        "summary"
       ]
     },
     {
@@ -5307,6 +5307,7 @@
       ],
       "relativePath": "/core/src/com/google/inject/internal/Error/ErrorId.java",
       "type": [
+        "summary",
         "pointer"
       ]
     },
@@ -5327,8 +5328,7 @@
       ],
       "relativePath": "/core/src/com/google/inject/internal/Error/ErrorId.java",
       "type": [
-        "summary",
-        "usage"
+        "summary"
       ]
     },
     {
@@ -5428,7 +5428,7 @@
       ],
       "relativePath": "/core/src/com/google/inject/internal/Error/ErrorId.java",
       "type": [
-        "usage"
+        "summary"
       ]
     },
     {
@@ -5489,7 +5489,7 @@
       ],
       "relativePath": "/core/src/com/google/inject/internal/Error/ErrorId.java",
       "type": [
-        "usage"
+        "summary"
       ]
     },
     {
@@ -5509,6 +5509,7 @@
       ],
       "relativePath": "/core/src/com/google/inject/internal/Error/ErrorId.java",
       "type": [
+        "summary",
         "usage"
       ]
     }
@@ -5713,7 +5714,7 @@
       ],
       "relativePath": "/core/src/com/google/inject/internal/Error/Errors.java",
       "type": [
-        "usage"
+        "expand"
       ]
     },
     {
@@ -6318,7 +6319,7 @@
       ],
       "relativePath": "/core/src/com/google/inject/internal/Error/Errors.java",
       "type": [
-        "usage"
+        "expand"
       ]
     },
     {
@@ -6679,7 +6680,9 @@
         481
       ],
       "relativePath": "/core/src/com/google/inject/internal/Error/Errors.java",
-      "type": []
+      "type": [
+        "summary"
+      ]
     },
     {
       "className": "Errors",
@@ -6838,8 +6841,7 @@
       ],
       "relativePath": "/core/src/com/google/inject/internal/Error/Errors.java",
       "type": [
-        "summary",
-        "usage"
+        "summary"
       ]
     },
     {
@@ -7309,8 +7311,8 @@
       ],
       "relativePath": "/core/src/com/google/inject/util/Enhanced.java",
       "type": [
-        "summary",
-        "rational"
+        "expand",
+        "usage"
       ]
     }
   ],
@@ -7474,7 +7476,8 @@
       "relativePath": "/core/src/com/google/inject/util/Modules.java",
       "type": [
         "summary",
-        "usage"
+        "usage",
+        "pointer"
       ]
     },
     {
@@ -8182,7 +8185,7 @@
       ]
     }
   ],
-  "/home/node/Userstudy-repo/core/test/com/google/inject/DefaultMethodInterceptionTest.java": [
+  "/home/node/Userstudy-repo/core/test/com/google/inject/internal/util/DefaultMethodInterceptionTest.java": [
     {
       "className": "",
       "content": "Tests for interception of default methods.",
@@ -8198,7 +8201,7 @@
         19,
         19
       ],
-      "relativePath": "/core/test/com/google/inject/DefaultMethodInterceptionTest.java",
+      "relativePath": "core/test/com/google/inject/internal/util/DefaultMethodInterceptionTest.java",
       "type": [
         "summary"
       ]
@@ -8218,7 +8221,7 @@
         21,
         21
       ],
-      "relativePath": "/core/test/com/google/inject/DefaultMethodInterceptionTest.java",
+      "relativePath": "core/test/com/google/inject/internal/util/DefaultMethodInterceptionTest.java",
       "type": [
         "ownership"
       ]
@@ -8238,7 +8241,7 @@
         30,
         30
       ],
-      "relativePath": "/core/test/com/google/inject/DefaultMethodInterceptionTest.java",
+      "relativePath": "core/test/com/google/inject/internal/util/DefaultMethodInterceptionTest.java",
       "type": [
         "summary"
       ]
@@ -8258,7 +8261,7 @@
         52,
         52
       ],
-      "relativePath": "/core/test/com/google/inject/DefaultMethodInterceptionTest.java",
+      "relativePath": "core/test/com/google/inject/internal/util/DefaultMethodInterceptionTest.java",
       "type": [
         "summary",
         "usage"
@@ -8279,7 +8282,7 @@
         61,
         61
       ],
-      "relativePath": "/core/test/com/google/inject/DefaultMethodInterceptionTest.java",
+      "relativePath": "core/test/com/google/inject/internal/util/DefaultMethodInterceptionTest.java",
       "type": [
         "usage"
       ]
@@ -8299,7 +8302,7 @@
         105,
         105
       ],
-      "relativePath": "/core/test/com/google/inject/DefaultMethodInterceptionTest.java",
+      "relativePath": "core/test/com/google/inject/internal/util/DefaultMethodInterceptionTest.java",
       "type": [
         "usage"
       ]
@@ -8319,7 +8322,7 @@
         107,
         107
       ],
-      "relativePath": "/core/test/com/google/inject/DefaultMethodInterceptionTest.java",
+      "relativePath": "core/test/com/google/inject/internal/util/DefaultMethodInterceptionTest.java",
       "type": [
         "expand",
         "usage"
@@ -8340,7 +8343,7 @@
         114,
         114
       ],
-      "relativePath": "/core/test/com/google/inject/DefaultMethodInterceptionTest.java",
+      "relativePath": "core/test/com/google/inject/internal/util/DefaultMethodInterceptionTest.java",
       "type": [
         "usage"
       ]
@@ -8360,7 +8363,7 @@
         130,
         130
       ],
-      "relativePath": "/core/test/com/google/inject/DefaultMethodInterceptionTest.java",
+      "relativePath": "core/test/com/google/inject/internal/util/DefaultMethodInterceptionTest.java",
       "type": [
         "expand",
         "usage"
@@ -8381,7 +8384,7 @@
         137,
         137
       ],
-      "relativePath": "/core/test/com/google/inject/DefaultMethodInterceptionTest.java",
+      "relativePath": "core/test/com/google/inject/internal/util/DefaultMethodInterceptionTest.java",
       "type": [
         "usage"
       ]
@@ -8401,7 +8404,7 @@
         141,
         141
       ],
-      "relativePath": "/core/test/com/google/inject/DefaultMethodInterceptionTest.java",
+      "relativePath": "core/test/com/google/inject/internal/util/DefaultMethodInterceptionTest.java",
       "type": [
         "expand",
         "usage"
@@ -8422,7 +8425,7 @@
         149,
         149
       ],
-      "relativePath": "/core/test/com/google/inject/DefaultMethodInterceptionTest.java",
+      "relativePath": "core/test/com/google/inject/internal/util/DefaultMethodInterceptionTest.java",
       "type": [
         "usage"
       ]
@@ -8442,14 +8445,14 @@
         167,
         167
       ],
-      "relativePath": "/core/test/com/google/inject/DefaultMethodInterceptionTest.java",
+      "relativePath": "core/test/com/google/inject/internal/util/DefaultMethodInterceptionTest.java",
       "type": [
         "expand",
         "usage"
       ]
     }
   ],
-  "/home/node/Userstudy-repo/core/test/com/google/inject/internal/ProxyFactoryTest.java": [
+  "/home/node/Userstudy-repo/core/test/com/google/inject/internal/util/ProxyFactoryTest.java": [
     {
       "className": "",
       "content": "@author crazybob@google.com (Bob Lee)",
@@ -8465,7 +8468,7 @@
         23,
         23
       ],
-      "relativePath": "/core/test/com/google/inject/internal/ProxyFactoryTest.java",
+      "relativePath": "core/test/com/google/inject/internal/util/ProxyFactoryTest.java",
       "type": [
         "ownership"
       ]
@@ -8535,11 +8538,2710 @@
       ]
     }
   ],
+  "/home/node/Userstudy-repo/core/test/com/google/inject/internal/util/SpiUtils.java": [
+    {
+      "className": "",
+      "content": "Utilities for testing the Multibinder and MapBinder extension SPI.",
+      "id": 422,
+      "index": [
+        0,
+        2
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        67,
+        71
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "@author sameb@google.com (Sam Berlin)",
+      "id": 423,
+      "index": [
+        0,
+        2
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        67,
+        71
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "ownership"
+      ]
+    },
+    {
+      "className": "",
+      "content": "The kind of test we should perform. A live Injector, a raw Elements (Module) test, or both.",
+      "id": 424,
+      "index": [
+        2,
+        99
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        74,
+        74
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Asserts that MapBinderBinding visitors for work correctly.",
+      "id": 425,
+      "index": [
+        2,
+        4
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        81,
+        94
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "@param <T> The type of the binding\n@param mapKey The key the map belongs to.\n@param keyType the TypeLiteral of the key of the map\n@param valueType the TypeLiteral of the value of the map\n@param modules The modules that define the mapbindings\n@param visitType The kind of test we should perform. A live Injector, a raw Elements (Module)\n    test, or both.\n@param allowDuplicates If duplicates are allowed.\n@param expectedMapBindings The number of other mapbinders we expect to see.\n@param results The kind of bindings contained in the mapbinder.",
+      "id": 426,
+      "index": [
+        2,
+        4
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        81,
+        94
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that the binding is a MapBinderBinding.",
+      "id": 427,
+      "index": [
+        4,
+        54
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        132,
+        132
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that the binding is a MapBinderBinding with the correct key and types.",
+      "id": 428,
+      "index": [
+        4,
+        85
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        134,
+        134
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that the binding is a MapBinderBinding with the correct key and types.",
+      "id": 429,
+      "index": [
+        4,
+        85
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        136,
+        136
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that the binding is a MapBinderBinding with the correct key and types.",
+      "id": 430,
+      "index": [
+        4,
+        85
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        138,
+        138
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that the binding permits duplicates.",
+      "id": 431,
+      "index": [
+        4,
+        51
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        140,
+        140
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that the entries returned from getEntries() are correct.",
+      "id": 432,
+      "index": [
+        4,
+        71
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        144,
+        144
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that the alternate keys are correct.",
+      "id": 433,
+      "index": [
+        4,
+        51
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        196,
+        196
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "This is the binding we are looking for.",
+      "id": 434,
+      "index": [
+        10,
+        51
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        235,
+        235
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MapBinderBinding.",
+      "id": 435,
+      "index": [
+        8,
+        64
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        241,
+        241
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MapBinderBinding.",
+      "id": 436,
+      "index": [
+        8,
+        64
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        245,
+        245
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MapBinderBinding.",
+      "id": 437,
+      "index": [
+        8,
+        64
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        249,
+        249
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MapBinderBinding.",
+      "id": 438,
+      "index": [
+        8,
+        64
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        253,
+        253
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is a SetBinding.",
+      "id": 439,
+      "index": [
+        8,
+        53
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        257,
+        257
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MultibinderBinding.",
+      "id": 440,
+      "index": [
+        8,
+        66
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        260,
+        260
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MultibinderBinding.",
+      "id": 441,
+      "index": [
+        8,
+        66
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        264,
+        264
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MultibinderBinding.",
+      "id": 442,
+      "index": [
+        8,
+        66
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        268,
+        268
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MapBinderBinding.",
+      "id": 443,
+      "index": [
+        8,
+        64
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        272,
+        272
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MapBinderBinding.",
+      "id": 444,
+      "index": [
+        8,
+        64
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        276,
+        276
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MapBinderBinding.",
+      "id": 445,
+      "index": [
+        8,
+        64
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        280,
+        280
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MapBinderBinding.",
+      "id": 446,
+      "index": [
+        8,
+        64
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        284,
+        284
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is a SetBinding.",
+      "id": 447,
+      "index": [
+        8,
+        53
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        288,
+        288
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MultibinderBinding.",
+      "id": 448,
+      "index": [
+        8,
+        66
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        292,
+        292
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "weird casting required to workaround compilation issues with jdk6",
+      "id": 449,
+      "index": [
+        12,
+        79
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        299,
+        299
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "expand",
+        "deprecation"
+      ]
+    },
+    {
+      "className": "",
+      "content": "account for 1 duplicate binding",
+      "id": 450,
+      "index": [
+        21,
+        54
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        315,
+        315
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary",
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Multiply by two because each has a value and Map.Entry.",
+      "id": 451,
+      "index": [
+        4,
+        61
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        317,
+        317
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "expand",
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that we found all the entries we expected.",
+      "id": 452,
+      "index": [
+        4,
+        57
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        323,
+        323
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that the binding is a MapBinderBinding.",
+      "id": 453,
+      "index": [
+        4,
+        54
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        365,
+        365
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Make sure the entries returned from getEntries(elements) are correct.",
+      "id": 454,
+      "index": [
+        4,
+        75
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        370,
+        370
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Because getEntries() can return duplicates, make sure to continue searching, even",
+      "id": 455,
+      "index": [
+        4,
+        87
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        371,
+        371
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "rational"
+      ]
+    },
+    {
+      "className": "",
+      "content": "after we find one match.",
+      "id": 456,
+      "index": [
+        4,
+        30
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        372,
+        372
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "expand",
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that the entry matches the expected result.",
+      "id": 457,
+      "index": [
+        10,
+        64
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        380,
+        380
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that we found at least one entry for the result.",
+      "id": 458,
+      "index": [
+        6,
+        65
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        387,
+        387
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that we found all the entries we expected.",
+      "id": 459,
+      "index": [
+        4,
+        57
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        395,
+        395
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that the mapbinder has the correct key and types.",
+      "id": 460,
+      "index": [
+        4,
+        64
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        399,
+        399
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that the alternate keys are correct.",
+      "id": 461,
+      "index": [
+        4,
+        51
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        425,
+        425
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "weird casting required to workaround jdk6 compilation problems",
+      "id": 462,
+      "index": [
+        12,
+        76
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        473,
+        473
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "deprecation"
+      ]
+    },
+    {
+      "className": "",
+      "content": "This is the binding we are looking for.",
+      "id": 463,
+      "index": [
+        12,
+        53
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        489,
+        489
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MapBinderBinding.",
+      "id": 464,
+      "index": [
+        10,
+        66
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        502,
+        502
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MapBinderBinding.",
+      "id": 465,
+      "index": [
+        10,
+        66
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        507,
+        507
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MapBinderBinding.",
+      "id": 466,
+      "index": [
+        10,
+        66
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        512,
+        512
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MapBinderBinding.",
+      "id": 467,
+      "index": [
+        10,
+        66
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        517,
+        517
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is a SetBinding.",
+      "id": 468,
+      "index": [
+        10,
+        55
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        522,
+        522
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MultibinderBinding.",
+      "id": 469,
+      "index": [
+        10,
+        68
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        525,
+        525
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MultibinderBinding.",
+      "id": 470,
+      "index": [
+        10,
+        68
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        531,
+        531
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MultibinderBinding.",
+      "id": 471,
+      "index": [
+        10,
+        68
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        536,
+        536
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MapBinderBinding.",
+      "id": 472,
+      "index": [
+        10,
+        66
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        541,
+        541
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MapBinderBinding.",
+      "id": 473,
+      "index": [
+        10,
+        66
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        546,
+        546
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MapBinderBinding.",
+      "id": 474,
+      "index": [
+        10,
+        66
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        551,
+        551
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MapBinderBinding.",
+      "id": 475,
+      "index": [
+        10,
+        66
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        556,
+        556
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is a SetBinding.",
+      "id": 476,
+      "index": [
+        10,
+        55
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        561,
+        561
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MultibinderBinding.",
+      "id": 477,
+      "index": [
+        10,
+        68
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        566,
+        566
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "allow for 1 duplicate binding",
+      "id": 478,
+      "index": [
+        26,
+        57
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        579,
+        579
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary",
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Multiply by 2 because each has a value, and Map.Entry",
+      "id": 479,
+      "index": [
+        4,
+        59
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        581,
+        581
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "expand",
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that we found all the entries we expected.",
+      "id": 480,
+      "index": [
+        4,
+        57
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        583,
+        583
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that we can construct an injector out of the remaining bindings.",
+      "id": 481,
+      "index": [
+        4,
+        79
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        607,
+        607
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Asserts that MultibinderBinding visitors work correctly.",
+      "id": 482,
+      "index": [
+        2,
+        4
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        611,
+        623
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "@param <T> The type of the binding\n@param setKey The key the set belongs to.\n@param elementType the TypeLiteral of the element\n@param modules The modules that define the multibindings\n@param visitType The kind of test we should perform. A live Injector, a raw Elements (Module)\n    test, or both.\n@param allowDuplicates If duplicates are allowed.\n@param expectedMultibindings The number of other multibinders we expect to see.\n@param results The kind of bindings contained in the multibinder.",
+      "id": 483,
+      "index": [
+        2,
+        4
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        611,
+        623
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that the binding is a MultibinderBinding.",
+      "id": 484,
+      "index": [
+        4,
+        60
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        664,
+        664
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that the elements returned from getElements() are correct.",
+      "id": 485,
+      "index": [
+        4,
+        73
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        677,
+        677
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "This is the binding we are looking for.",
+      "id": 486,
+      "index": [
+        10,
+        51
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        720,
+        720
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "This is a binding that is in the set of elements.",
+      "id": 487,
+      "index": [
+        8,
+        59
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        726,
+        726
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MultibinderBinding.",
+      "id": 488,
+      "index": [
+        8,
+        66
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        729,
+        729
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MultibinderBinding.",
+      "id": 489,
+      "index": [
+        8,
+        66
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        733,
+        733
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MultibinderBinding.",
+      "id": 490,
+      "index": [
+        8,
+        66
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        737,
+        737
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that we found all the elements we expected.",
+      "id": 491,
+      "index": [
+        4,
+        58
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        747,
+        747
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "If duplicates are allowed, we should have one more element than the",
+      "id": 492,
+      "index": [
+        6,
+        75
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        753,
+        753
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "expand",
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "If duplicates are not allowed, we should have no more elements than the",
+      "id": 493,
+      "index": [
+        6,
+        79
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        756,
+        756
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "expand",
+        "rational"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that we found all the other multibinders we expected.",
+      "id": 494,
+      "index": [
+        4,
+        68
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        759,
+        759
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that the binding is a MultibinderBinding.",
+      "id": 495,
+      "index": [
+        4,
+        56
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        788,
+        788
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that the binding is a MultibinderBinding with the correct key and types.",
+      "id": 496,
+      "index": [
+        4,
+        87
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        791,
+        791
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "This is the binding we are looking for.",
+      "id": 497,
+      "index": [
+        12,
+        53
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        827,
+        827
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MultibinderBinding.",
+      "id": 498,
+      "index": [
+        8,
+        66
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        836,
+        836
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MultibinderBinding.",
+      "id": 499,
+      "index": [
+        8,
+        66
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        841,
+        841
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that this binding is also a MultibinderBinding.",
+      "id": 500,
+      "index": [
+        8,
+        66
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        846,
+        846
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "If duplicates are allowed, we should have one more element than the",
+      "id": 501,
+      "index": [
+        6,
+        75
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        856,
+        856
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "expand",
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "bindResults.size() + 1 because we allow for one duplicate binding.",
+      "id": 502,
+      "index": [
+        6,
+        74
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        857,
+        857
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "This is because the multibinder will contain the binding itself.",
+      "id": 503,
+      "index": [
+        6,
+        72
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        858,
+        858
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "rational"
+      ]
+    },
+    {
+      "className": "",
+      "content": "If duplicates are not allowed, we should have no more elements than the",
+      "id": 504,
+      "index": [
+        6,
+        79
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        864,
+        864
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "expand",
+        "rational"
+      ]
+    },
+    {
+      "className": "",
+      "content": "bindResults.size() + duplicates, because we allow for 1 duplicate binding.",
+      "id": 505,
+      "index": [
+        6,
+        82
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        865,
+        865
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "This is because the multibinder will contain the binding itself.",
+      "id": 506,
+      "index": [
+        6,
+        72
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        866,
+        866
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "rational"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that the elements returned from getElements() are correct.",
+      "id": 507,
+      "index": [
+        4,
+        73
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        872,
+        872
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that we can construct an injector out of the remaining bindings.",
+      "id": 508,
+      "index": [
+        4,
+        79
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        881,
+        881
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Asserts that OptionalBinderBinding visitors for work correctly.",
+      "id": 509,
+      "index": [
+        2,
+        4
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        885,
+        898
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "@param <T> The type of the binding\n@param keyType The key OptionalBinder is binding\n@param modules The modules that define the bindings\n@param visitType The kind of test we should perform. A live Injector, a raw Elements (Module)\n    test, or both.\n@param expectedOtherOptionalBindings the # of other optional bindings we expect to see.\n@param expectedDefault the expected default binding, or null if none\n@param expectedActual the expected actual binding, or null if none\n@param expectedUserLinkedActual the user binding that is the actual binding, used if neither\n    the default nor actual are set and a user binding existed for the type.",
+      "id": 510,
+      "index": [
+        2,
+        4
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        885,
+        898
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "expect twice as many bindings because of java.util.Optional",
+      "id": 511,
+      "index": [
+        4,
+        65
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        911,
+        911
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "If we expect a user linked actual, then we cannot have an expected actual or default.",
+      "id": 512,
+      "index": [
+        6,
+        93
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        943,
+        943
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "rational"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that the binding is an OptionalBinderBinding.",
+      "id": 513,
+      "index": [
+        4,
+        64
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        957,
+        957
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that the binding is an OptionalBinderBinding.",
+      "id": 514,
+      "index": [
+        4,
+        64
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        964,
+        964
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "If we expect no default, then we should not have a default binding.",
+      "id": 515,
+      "index": [
+        6,
+        75
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        969,
+        969
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "usage",
+        "rational"
+      ]
+    },
+    {
+      "className": "",
+      "content": "If we expect a default, then we should have a default binding.",
+      "id": 516,
+      "index": [
+        6,
+        70
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        973,
+        973
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "rational"
+      ]
+    },
+    {
+      "className": "",
+      "content": "The java OptionalBinder should have the same default binding.",
+      "id": 517,
+      "index": [
+        6,
+        73
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        980,
+        980
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "If we expect no actual or user linked actual, then we should not have an actual binding.",
+      "id": 518,
+      "index": [
+        6,
+        96
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        990,
+        990
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "rational"
+      ]
+    },
+    {
+      "className": "",
+      "content": "If we expect an actual binding, then we should have an actual binding.",
+      "id": 519,
+      "index": [
+        6,
+        78
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        995,
+        995
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "rational"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that the alternate keys are correct.",
+      "id": 520,
+      "index": [
+        4,
+        55
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1032,
+        1032
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "also check the java OptionalBinder",
+      "id": 521,
+      "index": [
+        6,
+        42
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1057,
+        1057
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "expand",
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "This is the binding we are looking for.",
+      "id": 522,
+      "index": [
+        10,
+        51
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1063,
+        1063
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "This is the binding we are looking for.",
+      "id": 523,
+      "index": [
+        10,
+        51
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1066,
+        1066
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "keyType might match because a user bound it",
+      "id": 524,
+      "index": [
+        8,
+        53
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1073,
+        1073
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "expand"
+      ]
+    },
+    {
+      "className": "",
+      "content": "(which is possible in a purely absent OptionalBinder)",
+      "id": 525,
+      "index": [
+        8,
+        63
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1074,
+        1074
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "optionalKey might match because a user bound it",
+      "id": 526,
+      "index": [
+        8,
+        57
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1080,
+        1080
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary",
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "javaOptionalKey might match because a user bound it",
+      "id": 527,
+      "index": [
+        8,
+        61
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1084,
+        1084
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "optionalJakartaProviderKey might match because a user bound it",
+      "id": 528,
+      "index": [
+        8,
+        72
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1088,
+        1088
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": []
+    },
+    {
+      "className": "",
+      "content": "javaOptionalJakartaProviderKey might match because a user bound it",
+      "id": 529,
+      "index": [
+        8,
+        76
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1092,
+        1092
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "optionalProviderKey might match because a user bound it",
+      "id": 530,
+      "index": [
+        8,
+        65
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1096,
+        1096
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "javaOptionalProviderKey might match because a user bound it",
+      "id": 531,
+      "index": [
+        8,
+        69
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1100,
+        1100
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "this is the default binding",
+      "id": 532,
+      "index": [
+        8,
+        37
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1104,
+        1104
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary",
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "this is the actual binding",
+      "id": 533,
+      "index": [
+        8,
+        36
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1108,
+        1108
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary",
+        "expand",
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "only expect a keymatch if either default or actual are set",
+      "id": 534,
+      "index": [
+        4,
+        64
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1117,
+        1117
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "expand",
+        "pointer"
+      ]
+    },
+    {
+      "className": "",
+      "content": "If we expect a user linked actual, then we cannot have an expected actual or default.",
+      "id": 535,
+      "index": [
+        6,
+        93
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1142,
+        1142
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "rational"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Locate the defaultKey & actualKey",
+      "id": 536,
+      "index": [
+        4,
+        39
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1164,
+        1164
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that the binding is an OptionalBinderBinding.",
+      "id": 537,
+      "index": [
+        4,
+        60
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1175,
+        1175
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "also check the java OptionalBinder",
+      "id": 538,
+      "index": [
+        6,
+        42
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1204,
+        1204
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "expand",
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "This is the binding we are looking for.",
+      "id": 539,
+      "index": [
+        12,
+        53
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1218,
+        1218
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "This is the binding we are looking for.",
+      "id": 540,
+      "index": [
+        12,
+        53
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1221,
+        1221
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "keyType might match because a user bound it",
+      "id": 541,
+      "index": [
+        8,
+        53
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1232,
+        1232
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "expand"
+      ]
+    },
+    {
+      "className": "",
+      "content": "(which is possible in a purely absent OptionalBinder)",
+      "id": 542,
+      "index": [
+        8,
+        63
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1233,
+        1233
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "optionalKey might match because a user bound it",
+      "id": 543,
+      "index": [
+        8,
+        57
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1239,
+        1239
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary",
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "javaOptionalKey might match because a user bound it",
+      "id": 544,
+      "index": [
+        8,
+        61
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1243,
+        1243
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "optionalJakartaProviderKey might match because a user bound it",
+      "id": 545,
+      "index": [
+        8,
+        72
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1247,
+        1247
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": []
+    },
+    {
+      "className": "",
+      "content": "javaOptionalJakartaProviderKey might match because a user bound it",
+      "id": 546,
+      "index": [
+        8,
+        76
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1251,
+        1251
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "usage"
+      ]
+    },
+    {
+      "className": "",
+      "content": "optionalProviderKey might match because a user bound it",
+      "id": 547,
+      "index": [
+        8,
+        65
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1255,
+        1255
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "javaOptionalProviderKey might match because a user bound it",
+      "id": 548,
+      "index": [
+        8,
+        69
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1259,
+        1259
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "otherwise it might just be a ProviderLookup into it",
+      "id": 549,
+      "index": [
+        25,
+        78
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1264,
+        1264
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "rational"
+      ]
+    },
+    {
+      "className": "",
+      "content": "otherwise it might just be a ProviderLookup into it",
+      "id": 550,
+      "index": [
+        25,
+        78
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1271,
+        1271
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "rational"
+      ]
+    },
+    {
+      "className": "",
+      "content": "only expect a keymatch if either default or actual are set",
+      "id": 551,
+      "index": [
+        4,
+        64
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1280,
+        1280
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "expand",
+        "pointer"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Validate that we can construct an injector out of the remaining bindings.",
+      "id": 552,
+      "index": [
+        4,
+        79
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1296,
+        1296
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "Returns the subset of elements that have keys, indexed by them.",
+      "id": 553,
+      "index": [
+        2,
+        71
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1311,
+        1311
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    },
+    {
+      "className": "",
+      "content": "The kind of binding.",
+      "id": 554,
+      "index": [
+        2,
+        28
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1405,
+        1405
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary",
+        "expand"
+      ]
+    },
+    {
+      "className": "",
+      "content": "The result of the binding.",
+      "id": 555,
+      "index": [
+        2,
+        34
+      ],
+      "language": "java",
+      "lastCommitDate": "",
+      "level": "inline",
+      "lineNumber": [
+        1412,
+        1412
+      ],
+      "relativePath": "/core/test/com/google/inject/internal/util/SpiUtils.java",
+      "type": [
+        "summary"
+      ]
+    }
+  ],
   "/home/node/Userstudy-repo/tools/OsgiWrapper.java": [
     {
       "className": "",
       "content": "Java binary that runs bndlib to analyze a jar file to generate OSGi bundle manifest.",
-      "id": 422,
+      "id": 556,
       "index": [
         4,
         88
