@@ -33,8 +33,6 @@ import org.aopalliance.intercept.MethodInterceptor;
  * }
  * </pre>
  *
- * MapBinderBinding is not supported in PrivateElements. If you need to use MapBinder in a PrivateBinder, use
- * the {@link com.google.inject.multibindings.MapBinder} API instead.
  * 
  * @author crazybob@google.com (Bob Lee)
  */
@@ -63,11 +61,7 @@ public abstract class AbstractModule implements Module {
     return binder;
   }
 
-  /** @see Binder#bindScope(Class, Scope) 
-   * 
-   * TODO: Refactor to use wildcards, e.g. {@code Class<? extends Annotation>} in next version.
-   * 
-   */
+  /** @see Binder#bindScope(Class, Scope) */
   protected void bindScope(Class<? extends Annotation> scopeAnnotation, Scope scope) {
     binder().bindScope(scopeAnnotation, scope);
   }

@@ -58,7 +58,7 @@ public interface Injector {
    * Returns the members injector used to inject dependencies into methods and fields on instances
    * of the given type {@code T}.
    *
-   * @param typeLiteral type to get members injector for
+   * @param InjectionPoint type to get members injector for
    * @see Binder#getMembersInjector(TypeLiteral) for an alternative that offers up front error
    *     detection
    * @since 2.0
@@ -84,7 +84,6 @@ public interface Injector {
    * {@link Map#entrySet()} iterator) in the order of insertion. In other words, the order in which
    * bindings appear in user Modules.
    * 
-   * to be removed in 5.0, use {@link #getAllBindings()} instead.
    *
    * <p>This method is part of the Guice SPI and is intended for use by tools and extensions.
    */
@@ -112,7 +111,7 @@ public interface Injector {
    * be created if necessary.
    *
    * <p>This method is part of the Guice SPI and is intended for use by tools and extensions.
-   *
+   * 
    * @throws ConfigurationException if this injector cannot find or create the binding.
    */
   <T> Binding<T> getBinding(Key<T> key);
@@ -123,7 +122,8 @@ public interface Injector {
    * be created if necessary.
    *
    * <p>This method is part of the Guice SPI and is intended for use by tools and extensions.
-   *
+   * 
+   * @param key the injection key to get the binding for
    * @throws ConfigurationException if this injector cannot find or create the binding.
    * @since 2.0
    */
@@ -145,7 +145,7 @@ public interface Injector {
    *
    * <p>This method is part of the Guice SPI and is intended for use by tools and extensions.
    * 
-   * @Deprecated use {@link #getProvider(Dependency)} instead.
+   * 
    * 
    */
   <T> List<Binding<T>> findBindingsByType(TypeLiteral<T> type);
@@ -183,7 +183,7 @@ public interface Injector {
    * getProvider(type).get()}. When feasible, avoid using this method, in favor of having Guice
    * inject your dependencies ahead of time.
    * 
-   * This is no longer used and only present for backward compatibility.
+   * deprecate in 5.0, use {@link #getProvider(Class)} instead.
    *
    * @throws ConfigurationException if this injector cannot find or create the provider.
    * @throws ProvisionException if there was a runtime failure while providing an instance.
@@ -241,7 +241,7 @@ public interface Injector {
    * 
    * <p><b> legacy:</b> In v4.0 and later, prefer using {@link #createChildInjector(Iterable)} for
    * creating child injectors. This method is retained for compatibility, but it is recommended 
-   * to use the iterable version for consistency and flexibility.
+   * to use the iterable version for consistency and flexibility.**
    *
    * @since 2.0
    */
@@ -258,10 +258,12 @@ public interface Injector {
   Map<Class<? extends Annotation>, Scope> getScopeBindings();
 
   /**
-   * Returns a set containing all type converter bindings in the injector. The returned set is
+   * Returns a Map containing all type converter bindings in the injector. The returned set is
    * immutable.
-   *
+   * 
    * <p>This method is part of the Guice SPI and is intended for use by tools and extensions.
+   * 
+   * @return Map<TypeConverterBinding> this returns a map of scope annotations to their corresponding scope instances.
    *
    * @since 3.0
    */
@@ -281,10 +283,11 @@ public interface Injector {
    * injector}, should one exist.
    *
    * <p>This method is part of the Guice SPI and is intended for use by tools and extensions.
-   *
+   * 
+   * @param Element the type of elements required as input by this method
    * @since 4.2.3
    */
-  List<Element> getElements();
+  List<Element> getElements(Element);
 
   /**
    * Returns the injection points created for calls to {@link #getMembersInjector} (either directly
@@ -300,7 +303,7 @@ public interface Injector {
    * <p>This method is part of the Guice SPI and is intended for use by tools and extensions.
    *
    * <p> Refactoring needed to support multiple injection points for the same type. Method will be 
-   * removed in 5.0. 
+   * removed in 5.0.  **
    * 
    * @since 4.2.3
    */

@@ -14,11 +14,7 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 import org.aopalliance.intercept.MethodInterceptor;
 
-/**
- * Collects configuration information (primarily <i>bindings</i>) which will be used to create an
- * {@link Injector}. Guice provides this object to your application's {@link Module} implementors so
- * they may each contribute their own bindings and other registrations.
- *
+/** 
  * <h3>The Guice Binding EDSL</h3>
  *
  * Guice uses an <i>embedded domain-specific language</i>, or EDSL, to help you create bindings
@@ -104,6 +100,10 @@ import org.aopalliance.intercept.MethodInterceptor;
  * <p>The other methods of Binder such as {@link #bindInterceptor}, {@link #install}, {@link 
  * #requestStaticInjection} are not part of the Binding EDSL; you can learn how to use these in 
  * the usual way, from the method documentation.
+ * 
+ * Binder collects configuration information (primarily <i>bindings</i>) which will be used to create an
+ * {@link Injector}. Guice provides this object to your application's {@link Module} implementors so
+ * they may each contribute their own bindings and other registrations.
  *
  * @author crazybob@google.com (Bob Lee)
  * @author jessewilson@google.com (Jesse Wilson)
@@ -152,7 +152,6 @@ public interface Binder {
    * given object.
    * this method takes one single arugment to capture the full generic type information of the instance
    *
-   * @param type of instance
    * @param instance for which members will be injected
    * @since 2.0
    */
@@ -171,6 +170,9 @@ public interface Binder {
   /**
    * Upon successful creation, the {@link Injector} will inject static fields and methods in the
    * given classes.
+   * 
+   * the implementaion should be refactored to use {@link TypeLiteral} in 5.0, so that it can handle generic types
+   * kept for backward compatibility
    * 
    * @param types for which static members will be injected
    */
@@ -194,11 +196,14 @@ public interface Binder {
    * the dependency. Additionally, the returned provider will not be valid until the {@link
    * Injector} has been created. The provider will throw an {@code IllegalStateException} if you try
    * to use it beforehand.
-   * the type of the provider will be the wildcard type of the dependency.
-   *
+   * 
+   * @param dependency the dependency to get a provider for
+   * @param <T> the type of the dependency
+   * @throws MessageException if the dependency cannot be resolved
+   * @return a provider for the given dependency
    * @since 4.0
    */
-  <T> Provider<T> getProvider(Dependency<T> dependency);
+  <T> Provider<T> getProvider(Dependency<T> dependency) throws ConfigurationException;
 
   /**
    * Returns the provider used to obtain instances for the given injection type. The returned
@@ -225,6 +230,8 @@ public interface Binder {
    * of the given type {@code T}. The returned members injector will not be valid until the main
    * {@link Injector} has been created. The members injector will throw an {@code
    * IllegalStateException} if you try to use it beforehand.
+   * 
+   * to be removed in 5.0, use {@link #getMembersInjector(TypeLiteral)} instead.
    *
    * @param type type to get members injector for
    * @since 2.0
@@ -246,6 +253,8 @@ public interface Binder {
    * This is typically a {@link StackTraceElement} for {@code .java} source but it could any binding
    * source, such as the path to a {@code .properties} file.
    *
+   * @deprecated in 5.0, use {@link #withSource(Object)} instead.
+   * 
    * @param source any object representing the source location and has a concise {@link
    *     Object#toString() toString()} value
    * @return a binder that shares its configuration with this binder
@@ -257,10 +266,11 @@ public interface Binder {
    * Returns a binder that skips {@code classesToSkip} when identify the calling code. The caller's
    * {@link StackTraceElement} is used to locate the source of configuration errors.
    * 
-   * Returns void when {@code classesToSkip} is empty.
+   * Returns void when {@code classesToSkip} is empty. 
    *
    * @param classesToSkip library classes that create bindings on behalf of their clients.
-   * @return a binder that shares its configuration with this binder.
+   * @return void – this method performs configuration side effects but does not return a value. 
+   * When {@code classesToSkip} is empty, no skipping behavior is applied and the method exits immediately.
    * @since 2.0
    */
   Binder skipSources(Class<?>... classesToSkip);
@@ -269,6 +279,8 @@ public interface Binder {
    * Creates a new private child environment for bindings and other configuration. The returned
    * binder can be used to add and configuration information in this environment. See {@link
    * PrivateModule} for details.
+   * 
+   * This is no longer used and only present for backward compatibility. 
    *
    * @return a binder that inherits configuration from this binder. Only exposed configuration on
    *     the returned binder will be visible to this binder.
